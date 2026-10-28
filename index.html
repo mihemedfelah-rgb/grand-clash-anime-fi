@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#090b10">
+<title>Grand Clash — Anime Fight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="rotate" class="rotate"><div class="rotate-card"><div class="rotate-icon">↻</div><h2>Rotate your phone</h2><p>This battle is built for landscape mode.</p></div></div>
+<main id="gameShell">
+  <header class="hud">
+    <section class="fighter-info player-info">
+      <div class="portrait player-portrait"><span>海</span></div>
+      <div class="name-and-bar"><div class="name-row"><b>RUBBER CAPTAIN</b><small id="playerStatus">READY</small></div><div class="bar"><i id="playerHealth"></i></div><div class="subbar"><i id="playerEnergy"></i></div></div>
+    </section>
+    <div class="center-hud"><div class="round">GRAND CLASH <span>•</span> 01</div><div class="timer" id="timer">99</div><div class="round-label">SURVIVAL DUEL</div></div>
+    <section class="fighter-info enemy-info">
+      <div class="name-and-bar"><div class="name-row"><small id="enemyStatus">CPU</small><b>IRON MARAUDER</b></div><div class="bar"><i id="enemyHealth"></i></div><div class="subbar"><i id="enemyEnergy"></i></div></div>
+      <div class="portrait enemy-portrait"><span>刃</span></div>
+    </section>
+  </header>
+  <canvas id="arena" aria-label="Anime fighting game"></canvas>
+  <div class="arena-label"><span>THE STORM COAST</span><i></i><span id="message">FIGHT!</span></div>
+  <div class="controls">
+    <div class="movement">
+      <button class="control-btn move" data-action="left" aria-label="Move left">◀</button>
+      <button class="control-btn move" data-action="right" aria-label="Move right">▶</button>
+      <button class="control-btn jump" data-action="jump" aria-label="Jump"><span>↑</span><small>JUMP</small></button>
+    </div>
+    <div class="combat">
+      <button class="control-btn dodge" data-action="dodge" aria-label="Dodge"><span>⇢</span><small>DODGE</small></button>
+      <button class="control-btn attack" data-action="attack" aria-label="Attack"><span>✦</span><small>ATTACK</small></button>
+      <button class="control-btn haki" data-action="haki" aria-label="Haki special"><span>覇</span><small>HAKI</small></button>
+      <button class="control-btn gatling" data-action="gatling" aria-label="Gatling attack"><span>拳</span><small>GATLING</small></button>
+    </div>
+  </div>
+  <div class="bottom-hint">MOVE <span>·</span> JUMP <span>·</span> STRIKE <span>·</span> UNLEASH HAKI</div>
+  <div id="result" class="result hidden"><div class="result-card"><div class="result-kicker">DUEL COMPLETE</div><h1 id="resultTitle">VICTORY</h1><p id="resultText">The coast remembers this fight.</p><button id="restart">FIGHT AGAIN</button></div></div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
